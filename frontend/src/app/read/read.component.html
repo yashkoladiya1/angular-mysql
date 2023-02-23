@@ -1,0 +1,23 @@
+<div class="container my-5">
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">FullName</th>
+                <th scope="col">Email</th>
+                <th scope="col">Mobile</th>
+                <th scope="col">Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let usr of readUser">
+                <th scope="row">{{usr.id}}</th>
+                <td>{{usr.fullname}}</td>
+                <td>{{usr.email}}</td>
+                <td>{{usr.mobile}}</td>
+                <td><button type="button" class="btn btn-primary mx-2" routerLink="['create',usr.id]">EDIT</button><button type="button" class="btn btn-danger" (click)="deleteId(usr.id)">DELETE</button></td>
+            </tr>
+        </tbody>
+    </table>
+
+</div>
